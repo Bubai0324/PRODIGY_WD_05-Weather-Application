@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmos | Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="glass-card">
+            <div class="app-header">
+                <h1 class="app-title">Atmos</h1>
+                <div class="search-container">
+                    <input type="text" id="location-input" placeholder="Search location...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                    <button id="location-btn"><i class="fas fa-location-arrow"></i></button>
+                </div>
+            </div>
+
+            <div class="weather-display">
+                <div class="current-weather">
+                    <div class="weather-main">
+                        <div class="temperature-container">
+                            <span id="temperature">--</span>
+                            <span class="degree">°C</span>
+                        </div>
+                        <div class="weather-info">
+                            <div id="weather-condition">--</div>
+                            <div id="location">--</div>
+                        </div>
+                    </div>
+                    <div class="weather-icon">
+                        <img id="weather-icon" src="" alt="Weather icon">
+                    </div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-card">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <span class="detail-value" id="wind-speed">--</span>
+                            <span class="detail-label">Wind (kph)</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-tint"></i>
+                        <div>
+                            <span class="detail-value" id="humidity">--</span>
+                            <span class="detail-label">Humidity</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-compress-alt"></i>
+                        <div>
+                            <span class="detail-value" id="pressure">--</span>
+                            <span class="detail-label">Pressure (mb)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-container">
+                <h2 class="section-title">3-Day Forecast</h2>
+                <div class="forecast-cards" id="forecast-cards">
+                    <!-- Forecast cards will be added dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="particles-container">
+        <!-- Particles will be added dynamically -->
+    </div>
+
+    <div class="loading-state">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
